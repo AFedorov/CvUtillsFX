@@ -15,6 +15,7 @@ public class Test {
             System.out.println("Не удалось загрузить изображение из файла");
             return;
         }
+        System.out.println(image);
         CvUtilsFX.showImage(image, "Тестовое изображение");
 
         image.release();

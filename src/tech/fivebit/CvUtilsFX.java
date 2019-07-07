@@ -36,7 +36,7 @@ public class CvUtilsFX {
         }
         else if (mat.channels() == 3) {
             Mat mat_bgra = new Mat();
-            Imgproc.cvtColor(mat, mat_bgra, Imgproc.COLOR_GRAY2BGR);
+            Imgproc.cvtColor(mat, mat_bgra, Imgproc.COLOR_BGR2BGRA);
             mat = mat_bgra;
         }
         else if (mat.channels() == 4) {}
