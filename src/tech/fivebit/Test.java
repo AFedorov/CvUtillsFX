@@ -10,7 +10,13 @@ public class Test {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }
     public static void main (String[] args) {
-        Mat image = Imgcodecs.imread();
+        Mat image = Imgcodecs.imread("C:\\JProjects\\data\\IMG_9375.jpg");
+        if (image.empty()) {
+            System.out.println("Не удалось загрузить изображение из файла");
+            return;
+        }
+        CvUtilsFX.showImage(image, "Тестовое изображение");
 
+        image.release();
     }
 }
